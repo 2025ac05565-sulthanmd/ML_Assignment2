@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 from sklearn.metrics import classification_report, accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, matthews_corrcoef
 
-st.set_page_config(page_title="ML Model Evaluator", layout="wide")
+st.set_page_config(page_title="Bean Classification", layout="wide")
 
 @st.cache_resource
 def load_resources():
@@ -21,7 +21,7 @@ def load_resources():
 
 scaler, le, model_files = load_resources()
 
-st.title("🫘 Bean Classification Dashboard")
+st.title("🫘 Bean Classification")
 
 st.sidebar.header("Model Selection")
 selected_name = st.sidebar.selectbox("Choose a model", list(model_files.keys()))
